@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dasbor | EcoSchool</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🌱 EcoSchool
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Beranda
+            </a>
+
+            <a href="learn.html">
+                Belajar
+            </a>
+
+            <a href="game.html">
+                Bermain
+            </a>
+
+            <a href="quiz.html">
+                Kuis
+            </a>
+
+            <a href="dashboard.html" class="active">
+                Dasbor
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- DASHBOARD HEADER -->
+
+        <section class="dashboard-header">
+
+            <p class="small-title">
+                🌱 PERJALANAN ECO-MU
+            </p>
+
+
+            <h1>
+                Selamat datang,<br>
+                <span id="dashboard-name">
+                    Eco Hero
+                </span>!
+            </h1>
+
+
+            <p>
+                Lihat perkembanganmu dan terus kumpulkan
+                Eco Points untuk menjadi Eco Hero.
+            </p>
+
+        </section>
+
+
+
+        <!-- PROFILE CARD -->
+
+        <section class="dashboard-main">
+
+
+            <div class="profile-card">
+
+
+                <div class="profile-icon">
+                    🌿
+                </div>
+
+
+                <div class="profile-info">
+
+                    <p>
+                        LEVEL SAAT INI
+                    </p>
+
+                    <h2 id="level-name">
+                        Eco Beginner
+                    </h2>
+
+                    <span id="level-number">
+                        Level 1
+                    </span>
+
+                </div>
+
+
+                <div class="profile-points">
+
+                    <span>
+                        TOTAL ECO POINTS
+                    </span>
+
+                    <strong id="total-points">
+                        0
+                    </strong>
+
+                    <small>
+                        ⭐ XP
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LEVEL PROGRESS -->
+
+            <div class="level-progress-card">
+
+                <div class="progress-heading">
+
+                    <div>
+
+                        <strong>
+                            Progress Level
+                        </strong>
+
+                        <p id="next-level-text">
+                            250 XP lagi menuju level berikutnya
+                        </p>
+
+                    </div>
+
+
+                    <span id="level-percentage">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-progress">
+
+                    <div
+                        id="dashboard-progress-bar"
+                        class="dashboard-progress-bar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+            <!-- ECO TIP -->
+            <section class="eco-tip-card">
+                <div class="eco-tip-icon">💡</div>
+            
+                <div class="eco-tip-content">
+                    <span class="eco-tip-label">ECO TIP HARI INI</span>
+                    <h3 id="ecoTipTitle">Tahukah Kamu?</h3>
+                    <p id="ecoTipText">
+                        Gunakan kembali barang yang masih layak sebelum membuangnya.
+                    </p>
+                </div>
+            </section>
+
+            <!-- STATISTICS -->
+
+            <div class="dashboard-stats">
+
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        🎮
+                    </div>
+
+                    <span>
+                        Soal Sorting
+                    </span>
+
+                    <strong id="games-played">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        🧠
+                    </div>
+
+                    <span>
+                        Soal Kuis
+                    </span>
+
+                    <strong id="quizzes-played">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        🎯
+                    </div>
+
+                    <span>
+                        Akurasi Sorting
+                    </span>
+
+                    <strong id="sorting-accuracy">
+                        0%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        💡
+                    </div>
+
+                    <span>
+                        Akurasi Kuis
+                    </span>
+
+                    <strong id="quiz-accuracy">
+                        0%
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ACHIEVEMENTS -->
+
+            <section class="achievement-section">
+
+
+                <div class="achievement-heading">
+
+                    <div>
+
+                        <p class="small-title">
+                            🏆 PENCAPAIAN
+                        </p>
+
+                        <h2>
+                            Koleksi Achievement
+                        </h2>
+
+                    </div>
+
+                    <span id="achievement-count">
+                        0/5
+                    </span>
+
+                </div>
+
+
+
+                <div class="achievement-grid">
+
+
+                    <!-- FIRST STEP -->
+
+                    <div
+                        id="achievement-first"
+                        class="achievement-card locked"
+                    >
+
+                        <div class="achievement-icon">
+                            🌱
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Langkah Pertama
+                            </h3>
+
+                            <p>
+                                Selesaikan soal sorting atau soal kuis pertama.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WASTE SORTER -->
+
+                    <div
+                        id="achievement-sorter"
+                        class="achievement-card locked"
+                    >
+
+                        <div class="achievement-icon">
+                            ♻️
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Ahli Memilah
+                            </h3>
+
+                            <p>
+                                Jawab 10 soal sorting dengan benar.
+                            </p>
+                            
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-text">
+                                    <span>Progress</span>
+                                    <span id="sorter-progress-text">0/10</span>
+                                </div>
+                            
+                                <div class="achievement-progress-bar">
+                                    <div
+                                        id="sorter-progress-bar"
+                                        class="achievement-progress-fill"
+                                    ></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ECO BRAIN -->
+
+                    <div
+                        id="achievement-brain"
+                        class="achievement-card locked"
+                    >
+
+                        <div class="achievement-icon">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Otak Eco
+                            </h3>
+
+                            <p>
+                                Selesaikan soal kuis pertamamu.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EARTH GUARDIAN -->
+
+                    <div
+                        id="achievement-guardian"
+                        class="achievement-card locked"
+                    >
+
+                        <div class="achievement-icon">
+                            🌎
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Penjaga Bumi
+                            </h3>
+
+                            <p>
+                                Raih akurasi kuis minimal 90%.
+                            </p>
+                            
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-text">
+                                    <span>Akurasi</span>
+                                    <span id="guardian-progress-text">0%</span>
+                                </div>
+                            
+                                <div class="achievement-progress-bar">
+                                    <div
+                                        id="guardian-progress-bar"
+                                        class="achievement-progress-fill"
+                                    ></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ECO HERO -->
+
+                    <div
+                        id="achievement-hero"
+                        class="achievement-card locked"
+                    >
+
+                        <div class="achievement-icon">
+                            🏆
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Eco Hero
+                            </h3>
+
+                            <p>
+                                Kumpulkan minimal 1.000 Eco Points.
+                            </p>
+                            
+                            <div class="achievement-progress">
+                                <div class="achievement-progress-text">
+                                    <span>Eco Points</span>
+                                    <span id="hero-progress-text">0/1000</span>
+                                </div>
+                            
+                                <div class="achievement-progress-bar">
+                                    <div
+                                        id="hero-progress-bar"
+                                        class="achievement-progress-fill"
+                                    ></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+            <div>
+                🌱 <strong>EcoSchool</strong>
+            </div>
+    
+            <p>
+                Belajar. Pilah. Bertindak.
+            </p>
+        </div>
+    
+    
+        <div class="footer-author">
+            <span>Dibuat oleh</span>
+    
+            <strong>
+                Muhammad Iqbal Yanuar Prawangi
+            </strong>
+    
+            <small>
+                Kelas 9 IT 2
+            </small>
+        </div>
+    
+    
+        <p class="footer-copyright">
+            © 2026 EcoSchool
+        </p>
+    
+    </footer>
+
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

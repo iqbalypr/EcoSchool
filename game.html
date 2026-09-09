@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bermain | EcoSchool</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🌱 EcoSchool
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Beranda
+            </a>
+
+            <a href="learn.html">
+                Belajar
+            </a>
+
+            <a href="game.html" class="active">
+                Bermain
+            </a>
+
+            <a href="quiz.html">
+                Kuis
+            </a>
+
+            <a href="dashboard.html">
+                Dasbor
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- GAME HEADER -->
+
+        <section class="game-header">
+
+            <p class="small-title">
+                🎮 ECOSCHOOL CHALLENGE
+            </p>
+
+            <h1>
+                Yuk, pilah sampah!
+            </h1>
+
+            <p>
+                Tentukan tempat yang tepat untuk setiap sampah
+                dan kumpulkan Eco Points sebanyak-banyaknya.
+            </p>
+
+        </section>
+
+
+
+        <!-- GAME AREA -->
+
+        <section class="game-section">
+
+
+            <div class="game-topbar">
+
+                <div class="question-counter">
+
+                    Soal
+                    <strong id="question-number">
+                        1
+                    </strong>
+                    dari
+                    <strong>
+                        10
+                    </strong>
+
+                </div>
+
+
+                <div class="score-display">
+
+                    ⭐
+                    <span id="score">
+                        0
+                    </span>
+                    XP
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROGRESS -->
+
+            <div class="game-progress">
+
+                <div
+                    id="game-progress-bar"
+                    class="game-progress-bar"
+                ></div>
+
+            </div>
+
+
+
+            <!-- QUESTION CARD -->
+
+            <div class="question-card">
+
+
+                <div
+                    id="waste-emoji"
+                    class="waste-question-icon"
+                >
+                    🧴
+                </div>
+
+
+                <p class="question-label">
+                    SAMPAH APAKAH INI?
+                </p>
+
+
+                <h2 id="waste-name">
+                    Botol Plastik
+                </h2>
+
+
+                <p class="question-text">
+                    Masukkan sampah ini ke kategori yang tepat.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ANSWERS -->
+
+            <div class="answer-grid">
+
+
+                <button
+                    class="answer-button"
+                    onclick="checkAnswer('organik')"
+                >
+
+                    <span>🌱</span>
+
+                    <div>
+                        <strong>Organik</strong>
+
+                        <small>
+                            Sampah yang mudah terurai
+                        </small>
+                    </div>
+
+                </button>
+
+
+
+                <button
+                    class="answer-button"
+                    onclick="checkAnswer('anorganik')"
+                >
+
+                    <span>♻️</span>
+
+                    <div>
+                        <strong>Anorganik</strong>
+
+                        <small>
+                            Sampah yang dapat didaur ulang
+                        </small>
+                    </div>
+
+                </button>
+
+
+
+                <button
+                    class="answer-button"
+                    onclick="checkAnswer('b3')"
+                >
+
+                    <span>⚠️</span>
+
+                    <div>
+                        <strong>B3</strong>
+
+                        <small>
+                            Bahan berbahaya dan beracun
+                        </small>
+                    </div>
+
+                </button>
+
+
+
+                <button
+                    class="answer-button"
+                    onclick="checkAnswer('residu')"
+                >
+
+                    <span>🗑️</span>
+
+                    <div>
+                        <strong>Residu</strong>
+
+                        <small>
+                            Sampah yang sulit diolah
+                        </small>
+                    </div>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- FEEDBACK -->
+
+            <div
+                id="game-feedback"
+                class="game-feedback"
+                style="display: none;"
+            >
+
+                <div
+                    id="feedback-icon"
+                    class="feedback-icon"
+                >
+                    🎉
+                </div>
+
+
+                <h3 id="feedback-title">
+                    Benar!
+                </h3>
+
+
+                <p id="feedback-text">
+                    Jawabanmu tepat.
+                </p>
+
+
+                <button
+                    id="next-button"
+                    class="primary-button"
+                    onclick="nextQuestion()"
+                >
+                    SOAL BERIKUTNYA →
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- GAME RESULT -->
+
+        <section
+            id="game-result"
+            class="game-result"
+            style="display: none;"
+        >
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+
+            <p class="small-title">
+                TANTANGAN SELESAI!
+            </p>
+
+
+            <h2>
+                Kamu keren, Eco Hero! 🌱
+            </h2>
+
+
+            <div class="final-score">
+
+                <span>
+                    Total Eco Points
+                </span>
+
+                <strong id="final-score">
+                    0 XP
+                </strong>
+
+            </div>
+
+
+            <div class="result-stats">
+
+                <div>
+                    <strong id="correct-answer">
+                        0
+                    </strong>
+
+                    <span>
+                        Jawaban Benar
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong id="accuracy">
+                        0%
+                    </strong>
+
+                    <span>
+                        Akurasi
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="restartGame()"
+            >
+                MAIN LAGI ↻
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            🌱 <strong>EcoSchool</strong>
+        </div>
+
+
+        <p>
+            Belajar. Pilah. Bertindak. © 2026 EcoSchool
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>

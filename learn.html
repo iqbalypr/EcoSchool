@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Belajar | EcoSchool</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🌱 EcoSchool
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Beranda
+            </a>
+
+            <a href="learn.html" class="active">
+                Belajar
+            </a>
+
+            <a href="game.html">
+                Bermain
+            </a>
+
+            <a href="quiz.html">
+                Kuis
+            </a>
+
+            <a href="dashboard.html">
+                Dasbor
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <p class="small-title">
+                📚 BELAJAR BERSAMA ECOSCHOOL
+            </p>
+
+
+            <h1>
+                Kenali jenis sampah<br>
+                dan cara mengelolanya.
+            </h1>
+
+
+            <p>
+                Sebelum mulai bermain, yuk kenali berbagai jenis
+                sampah dan cara mengelolanya dengan tepat.
+            </p>
+
+        </section>
+
+
+
+        <!-- WASTE CATEGORIES -->
+
+        <section class="waste-section">
+
+
+            <div class="section-heading">
+
+                <p>
+                    KATEGORI SAMPAH
+                </p>
+
+                <h2>
+                    Sampah apa yang<br>
+                    kamu temukan?
+                </h2>
+
+            </div>
+
+
+
+            <div class="waste-container">
+
+
+                <!-- ORGANIK -->
+
+                <div class="waste-card"
+                     onclick="showWasteInfo('organik')">
+
+                    <div class="waste-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Organik
+                    </h3>
+
+                    <p>
+                        Sampah yang berasal dari makhluk hidup
+                        dan dapat terurai secara alami.
+                    </p>
+
+                    <span class="learn-more">
+                        Pelajari →
+                    </span>
+
+                </div>
+
+
+
+                <!-- ANORGANIK -->
+
+                <div class="waste-card"
+                     onclick="showWasteInfo('anorganik')">
+
+                    <div class="waste-icon">
+                        ♻️
+                    </div>
+
+                    <h3>
+                        Anorganik
+                    </h3>
+
+                    <p>
+                        Sampah yang sulit terurai dan sebagian
+                        dapat digunakan kembali atau didaur ulang.
+                    </p>
+
+                    <span class="learn-more">
+                        Pelajari →
+                    </span>
+
+                </div>
+
+
+
+                <!-- B3 -->
+
+                <div class="waste-card"
+                     onclick="showWasteInfo('b3')">
+
+                    <div class="waste-icon">
+                        ⚠️
+                    </div>
+
+                    <h3>
+                        B3
+                    </h3>
+
+                    <p>
+                        Sampah yang mengandung bahan berbahaya
+                        dan beracun bagi manusia maupun lingkungan.
+                    </p>
+
+                    <span class="learn-more">
+                        Pelajari →
+                    </span>
+
+                </div>
+
+
+
+                <!-- RESIDU -->
+
+                <div class="waste-card"
+                     onclick="showWasteInfo('residu')">
+
+                    <div class="waste-icon">
+                        🗑️
+                    </div>
+
+                    <h3>
+                        Residu
+                    </h3>
+
+                    <p>
+                        Sampah yang tidak dapat digunakan kembali
+                        atau didaur ulang dengan mudah.
+                    </p>
+
+                    <span class="learn-more">
+                        Pelajari →
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INFORMATION PANEL -->
+
+        <section
+            id="waste-info"
+            class="waste-info-section"
+            style="display: none;"
+        >
+
+            <div class="waste-info-content">
+
+
+                <button
+                    class="close-button"
+                    onclick="closeWasteInfo()"
+                >
+                    ×
+                </button>
+
+
+                <div
+                    id="waste-info-icon"
+                    class="info-icon"
+                >
+                </div>
+
+
+                <p
+                    id="waste-info-category"
+                    class="small-title"
+                >
+                </p>
+
+
+                <h2
+                    id="waste-info-title"
+                >
+                </h2>
+
+
+                <p
+                    id="waste-info-description"
+                >
+                </p>
+
+
+
+                <div class="info-grid">
+
+
+                    <div class="info-box">
+
+                        <h3>
+                            📌 Contoh
+                        </h3>
+
+                        <ul id="waste-info-examples">
+                        </ul>
+
+                    </div>
+
+
+
+                    <div class="info-box">
+
+                        <h3>
+                            💡 Tahukah Kamu?
+                        </h3>
+
+                        <p id="waste-info-fact">
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="tip-box">
+
+                    <strong>
+                        🌱 Tips EcoSchool
+                    </strong>
+
+                    <p id="waste-info-tip">
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CALL TO ACTION -->
+
+        <section class="learn-cta">
+
+            <div>
+
+                <p class="small-title">
+                    SUDAH SIAP?
+                </p>
+
+                <h2>
+                    Yuk, uji pengetahuanmu! 🎮
+                </h2>
+
+                <p>
+                    Setelah mempelajari jenis sampah,
+                    coba tantangan pemilahan sampah.
+                </p>
+
+            </div>
+
+
+            <a
+                href="game.html"
+                class="primary-button"
+            >
+                MULAI BERMAIN →
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            🌱 <strong>EcoSchool</strong>
+        </div>
+
+
+        <p>
+            Belajar. Pilah. Bertindak. © 2026 EcoSchool
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/learn.js"></script>
+
+</body>
+
+</html>

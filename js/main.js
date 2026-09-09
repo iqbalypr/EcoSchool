@@ -1,0 +1,1 @@
+console.log("EcoSchool is ready! 🌱");

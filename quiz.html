@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kuis | EcoSchool</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🌱 EcoSchool
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Beranda
+            </a>
+
+            <a href="learn.html">
+                Belajar
+            </a>
+
+            <a href="game.html">
+                Bermain
+            </a>
+
+            <a href="quiz.html" class="active">
+                Kuis
+            </a>
+
+            <a href="dashboard.html">
+                Dasbor
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- QUIZ HEADER -->
+
+        <section class="quiz-header">
+
+            <p class="small-title">
+                🧠 ECOSCHOOL QUIZ
+            </p>
+
+            <h1>
+                Seberapa banyak<br>
+                kamu tahu tentang lingkungan?
+            </h1>
+
+            <p>
+                Jawab pertanyaan berikut dan buktikan
+                pengetahuan lingkunganmu.
+            </p>
+
+        </section>
+
+
+
+        <!-- QUIZ SECTION -->
+
+        <section class="quiz-section">
+
+
+            <!-- QUIZ TOP -->
+
+            <div class="quiz-topbar">
+
+                <div class="quiz-counter">
+
+                    Pertanyaan
+                    <strong id="quiz-number">
+                        1
+                    </strong>
+                    dari
+                    <strong>
+                        10
+                    </strong>
+
+                </div>
+
+
+                <div class="quiz-score">
+
+                    ⭐
+                    <span id="quiz-score">
+                        0
+                    </span>
+                    XP
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROGRESS -->
+
+            <div class="quiz-progress">
+
+                <div
+                    id="quiz-progress-bar"
+                    class="quiz-progress-bar"
+                ></div>
+
+            </div>
+
+
+
+            <!-- QUESTION -->
+
+            <div class="quiz-card">
+
+
+                <div class="quiz-icon">
+                    🧠
+                </div>
+
+
+                <p
+                    id="quiz-category"
+                    class="quiz-category"
+                >
+                    LINGKUNGAN
+                </p>
+
+
+                <h2 id="quiz-question">
+                    Pertanyaan akan muncul di sini.
+                </h2>
+
+
+                <!-- ANSWERS -->
+
+                <div
+                    id="quiz-answers"
+                    class="quiz-answers"
+                >
+
+                    <button
+                        class="quiz-answer"
+                        onclick="selectAnswer(0)"
+                    >
+                        Jawaban A
+                    </button>
+
+
+                    <button
+                        class="quiz-answer"
+                        onclick="selectAnswer(1)"
+                    >
+                        Jawaban B
+                    </button>
+
+
+                    <button
+                        class="quiz-answer"
+                        onclick="selectAnswer(2)"
+                    >
+                        Jawaban C
+                    </button>
+
+
+                    <button
+                        class="quiz-answer"
+                        onclick="selectAnswer(3)"
+                    >
+                        Jawaban D
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FEEDBACK -->
+
+            <div
+                id="quiz-feedback"
+                class="quiz-feedback"
+                style="display: none;"
+            >
+
+                <div
+                    id="quiz-feedback-icon"
+                    class="feedback-icon"
+                >
+                    🎉
+                </div>
+
+
+                <h3 id="quiz-feedback-title">
+                    Jawaban Benar!
+                </h3>
+
+
+                <p id="quiz-feedback-text">
+                    Penjelasan jawaban.
+                </p>
+
+
+                <button
+                    class="primary-button"
+                    onclick="nextQuizQuestion()"
+                >
+                    LANJUT →
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- QUIZ RESULT -->
+
+        <section
+            id="quiz-result"
+            class="quiz-result"
+            style="display: none;"
+        >
+
+            <div class="result-icon">
+                🧠
+            </div>
+
+
+            <p class="small-title">
+                KUIS SELESAI!
+            </p>
+
+
+            <h2>
+                Hebat, Eco Hero! 🌱
+            </h2>
+
+
+            <div class="quiz-final-score">
+
+                <span>
+                    Skor Kamu
+                </span>
+
+                <strong id="quiz-final-score">
+                    0/100
+                </strong>
+
+            </div>
+
+
+            <div class="result-stats">
+
+
+                <div>
+
+                    <strong id="quiz-correct">
+                        0
+                    </strong>
+
+                    <span>
+                        Jawaban Benar
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="quiz-accuracy">
+                        0%
+                    </strong>
+
+                    <span>
+                        Akurasi
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="quiz-reward">
+
+                ⭐
+
+                <strong id="quiz-earned-xp">
+                    +0 Eco Points
+                </strong>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="restartQuiz()"
+            >
+                COBA LAGI ↻
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            🌱 <strong>EcoSchool</strong>
+        </div>
+
+
+        <p>
+            Belajar. Pilah. Bertindak. © 2026 EcoSchool
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/quiz.js"></script>
+
+</body>
+
+</html>
