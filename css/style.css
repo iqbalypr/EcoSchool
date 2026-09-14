@@ -2335,3 +2335,304 @@ footer p {
     transition: width 0.5s ease;
 }
 
+/* =========================
+   ECOSCAN PAGE
+========================= */
+
+.scan-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 8%;
+}
+
+.scan-page .page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.scan-page .page-heading h1 {
+    margin: 10px 0;
+    color: #1d4d35;
+    font-size: 38px;
+}
+
+.scan-page .page-heading p:last-child {
+    color: #6d8273;
+    line-height: 1.7;
+}
+
+.scan-card {
+    background: #ffffff;
+    border: 1px solid #e1ebe2;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 12px 35px rgba(34, 83, 49, 0.08);
+}
+
+.scan-upload-area {
+    text-align: center;
+    padding: 25px;
+    border: 2px dashed #b9d5bd;
+    border-radius: 18px;
+    background: #f7fbf7;
+}
+
+.scan-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.scan-upload-area h2 {
+    margin: 10px 0;
+    color: #285c32;
+}
+
+.scan-upload-area p {
+    color: #718274;
+    margin-bottom: 25px;
+}
+
+#image-upload {
+    display: none;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: #3b9b5f;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.upload-button:hover {
+    background: #2f814d;
+}
+
+.image-preview-container {
+    display: none;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.image-preview-container.show {
+    display: flex;
+}
+
+#image-preview {
+    width: 100%;
+    max-width: 350px;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 18px;
+    border: 1px solid #dce9de;
+    background: #f5f8f5;
+}
+
+.scan-button,
+.reset-scan-button {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 20px;
+    margin-top: 25px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.scan-button {
+    background: #285c32;
+    color: white;
+}
+
+.scan-button:hover:not(:disabled) {
+    background: #1e4727;
+}
+
+.scan-button:disabled {
+    background: #b8c8ba;
+    cursor: not-allowed;
+}
+
+.scan-loading {
+    text-align: center;
+    color: #5f8065;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.scan-result {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #edf8ee;
+    text-align: center;
+}
+
+.scan-result[hidden],
+.scan-loading[hidden] {
+    display: none;
+}
+
+.result-label {
+    color: #6b8c70;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#result-category {
+    margin: 10px 0;
+    color: #285c32;
+    font-size: 32px;
+}
+
+#result-confidence {
+    color: #527259;
+    font-weight: 700;
+}
+
+.result-description {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    text-align: left;
+}
+
+.result-description h3 {
+    margin-top: 0;
+    color: #315f39;
+}
+
+.result-description p {
+    color: #657768;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.reset-scan-button {
+    background: white;
+    color: #285c32;
+    border: 1px solid #a9c9ad;
+}
+
+.reset-scan-button:hover {
+    background: #f4faf4;
+}
+
+
+@media (max-width: 700px) {
+
+    .scan-page {
+        padding: 45px 20px;
+    }
+
+    .scan-page .page-heading h1 {
+        font-size: 30px;
+    }
+
+    .scan-card {
+        padding: 20px;
+    }
+
+    .scan-upload-area {
+        padding: 25px 15px;
+    }
+
+    #result-category {
+        font-size: 27px;
+    }
+
+}
+
+/* =========================
+   ECOSCAN CAMERA
+========================= */
+
+.scan-choice-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.camera-button {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 25px;
+    background: #285c32;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.camera-button:hover:not(:disabled) {
+    background: #1e4727;
+}
+
+.camera-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.camera-container {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #f1f8f2;
+    border: 1px solid #dce9de;
+}
+
+.camera-container[hidden] {
+    display: none;
+}
+
+#camera-video {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #18251b;
+}
+
+.camera-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.camera-buttons .scan-button,
+.camera-buttons .reset-scan-button {
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+
+    .scan-choice-buttons {
+        flex-direction: column;
+    }
+
+    .upload-button,
+    .camera-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .camera-buttons {
+        flex-direction: column;
+    }
+
+}
