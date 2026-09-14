@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoScan | EcoSchool</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            🌱 <span>EcoSchool</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="learn.html">Belajar</a>
+            <a href="scan.html" class="active">EcoScan</a>
+            <a href="game.html">Bermain</a>
+            <a href="quiz.html">Kuis</a>
+            <a href="dashboard.html">Dasbor</a>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <section class="scan-page">
+
+            <div class="page-heading">
+
+                <p class="small-title">
+                    🔍 ECOSCAN
+                </p>
+
+                <h1>
+                    Kenali Sampahmu
+                </h1>
+
+                <p>
+                    Upload gambar sampah dan biarkan AI membantu
+                    mengenali jenisnya.
+                </p>
+
+            </div>
+
+
+            <div class="scan-card">
+
+                <div class="scan-upload-area">
+
+    <div class="scan-icon">
+        📸
+    </div>
+
+    <h2>
+        Pilih Cara Scan
+    </h2>
+
+    <p>
+        Upload gambar atau gunakan kamera untuk mengenali sampah.
+    </p>
+
+    <div class="scan-choice-buttons">
+
+        <label for="image-upload" class="upload-button">
+            📁 Pilih Gambar
+        </label>
+
+        <button
+            type="button"
+            id="open-camera-button"
+            class="camera-button"
+        >
+            📷 Buka Kamera
+        </button>
+
+    </div>
+
+    <input
+        type="file"
+        id="image-upload"
+        accept="image/*"
+    >
+
+</div>
+
+
+<!-- CAMERA AREA -->
+
+<div
+    id="camera-container"
+    class="camera-container"
+    hidden
+>
+
+    <video
+        id="camera-video"
+        autoplay
+        playsinline
+    ></video>
+
+    <div class="camera-buttons">
+
+        <button
+            type="button"
+            id="capture-button"
+            class="scan-button"
+        >
+            📸 Ambil Foto
+        </button>
+
+        <button
+            type="button"
+            id="close-camera-button"
+            class="reset-scan-button"
+        >
+            Tutup Kamera
+        </button>
+
+    </div>
+
+</div>
+
+<canvas
+    id="camera-canvas"
+    hidden
+></canvas>
+
+                </div>
+
+
+                <div id="image-preview-container" class="image-preview-container">
+
+                    <img
+                        id="image-preview"
+                        alt="Preview gambar sampah"
+                    >
+
+                </div>
+
+
+                <button
+                    id="predict-button"
+                    class="scan-button"
+                    disabled
+                >
+                    🔍 Deteksi Sampah
+                </button>
+
+
+                <div
+                    id="loading-message"
+                    class="scan-loading"
+                    hidden
+                >
+                    Model AI sedang membaca gambar...
+                </div>
+
+
+                <div
+                    id="result-container"
+                    class="scan-result"
+                    hidden
+                >
+
+                    <p class="result-label">
+                        HASIL DETEKSI
+                    </p>
+
+                    <h2 id="result-category">
+                        -
+                    </h2>
+
+                    <p id="result-confidence">
+                        Tingkat keyakinan: -
+                    </p>
+
+                    <div class="result-description">
+
+                        <h3 id="result-title">
+                            -
+                        </h3>
+
+                        <p id="result-text">
+                            -
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="reset-scan-button"
+                        class="reset-scan-button"
+                    >
+                        Scan Gambar Lain
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <div>
+                🌱 <strong>EcoSchool</strong>
+            </div>
+
+            <p>
+                Belajar. Pilah. Bertindak.
+            </p>
+
+        </div>
+
+
+        <div class="footer-author">
+
+            <span>Dibuat oleh</span>
+
+            <strong>
+                Muhammad Iqbal Yanuar Prawangi
+            </strong>
+
+            <small>
+                Kelas 9 IT 2
+            </small>
+
+        </div>
+
+
+        <p class="footer-copyright">
+            © 2026 EcoSchool
+        </p>
+
+    </footer>
+
+
+    <!-- LIBRARY AI -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+
+    <!-- JAVASCRIPT ECOSCAN -->
+
+    <script src="js/scan.js"></script>
+
+</body>
+
+</html>
